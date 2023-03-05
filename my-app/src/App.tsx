@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { BaseButton, DefaultButton } from "@fluentui/react";
 
 function App() {
   return (
@@ -18,9 +19,17 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          <DefaultButton text="Default Button" onClick={handleClick} />
+        </div>
       </header>
     </div>
   );
+
+  function handleClick(): void {
+    alert("button clicked");
+    console.log("Click happened");
+  }
 }
 
 export default App;
